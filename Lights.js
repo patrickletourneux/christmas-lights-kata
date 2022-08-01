@@ -13,7 +13,12 @@ class Lights {
         // this.arrayCoord = [1];
         for (let i=0;i<this.Xdimension;i++){
             for (let j=0 ; j<this.Ydimension ; j++){
-                this.arrayCoord.push(1)
+                const obj = {
+                    x : i,
+                    y : j,
+                    light : false
+                }
+                this.arrayCoord.push(obj)
             }
         }
         console.log(this.arrayCoord)

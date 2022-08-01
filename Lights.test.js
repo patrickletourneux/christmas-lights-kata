@@ -4,8 +4,8 @@ const Lights = require('./Lights');
 
 
 describe('Lights class', () => {
-    const Xdimension = 10;
-    const Ydimension = 10;
+    const Xdimension = 1000;
+    const Ydimension = 1000;
     const countCases = Xdimension*Ydimension
     const instanceLights = new Lights(Xdimension,Ydimension);
     instanceLights.initArrayCoord()
