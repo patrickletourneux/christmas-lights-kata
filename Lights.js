@@ -13,7 +13,6 @@ class Lights {
                 countLight++
             };
         })
-        console.log('countLight ',countLight)
         return countLight
     }
     modify(X1,Y1,X2,Y2,action){
@@ -28,12 +27,12 @@ class Lights {
                             item.light = false;
                             break;
                         case "toggle" :
-                            item.light = true ? false : true ;
+                            item.light = item.light ? false : true ;
                             break;
                     }
                 }
         })
-        console.log(this.arrayCoord)
+        // console.log(action , '  ',this.arrayCoord)
     }
     turnOn(X1,Y1,X2,Y2){
         this.modify(X1,Y1,X2,Y2,'turnOn')
@@ -49,7 +48,6 @@ class Lights {
     }
     initArrayCoord(){
         this.arrayCoord = [];
-        // this.arrayCoord = [1];
         for (let i=0;i<this.Xdimension;i++){
             for (let j=0 ; j<this.Ydimension ; j++){
                 const obj = {
@@ -60,7 +58,6 @@ class Lights {
                 this.arrayCoord.push(obj)
             }
         }
-        console.log(this.arrayCoord)
         return this.arrayCoord
     }
 }
